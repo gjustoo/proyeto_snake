@@ -25,21 +25,26 @@
         START
     </button>
 
-
+    <div class="footer" id="footer">
+        <pre> </pre>
+    </div>
     <script>
         var indice = 0;
         const text = "Use your keyboard arrows to move the snake around the screen.".split("");
+        const copyRight = "Made by Gabriel Justo Ordoñez".split("");
 
-        function typing() {
-
+        function typingBottom() {
+            console.log("AAaa" + indice);
             if (indice < text.length) {
                 if (text[indice] == "")
                     document.getElementById('bottom_text').innerText += "&#160";
                 else
                     document.getElementById('bottom_text').innerText += text[indice];
                 indice += 1;
-                setTimeout(typing, 50);
+                setTimeout(typingBottom, 50);
 
+            } else {
+                indice = 0;
             }
         }
 
@@ -54,8 +59,23 @@
 
         }
 
+        function typingCopyRight() {
 
-        typing();
+            if (indice < copyRight.length) {
+                if (copyRight[indice] == "")
+                    document.getElementById('footer').getElementsByTagName('pre')[0].innerText += "&#160";
+                else
+                    document.getElementById('footer').getElementsByTagName('pre')[0].innerText += copyRight[indice];
+                indice += 1;
+                setTimeout(typingCopyRight, 50);
+
+            } else {
+                indice = 0;
+            }
+        }
+
+        typingBottom();
+        setTimeout(typingCopyRight, 4000);
     </script>
 
 

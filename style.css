@@ -19,6 +19,12 @@ canvas {
     display: none;
 }
 
+.footer {
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0px;
+}
+
 .score {
     position: absolute;
     top: 85px;
