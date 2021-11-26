@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" href="/snake.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake- By Gabriel</title>
+    <title>Snake - By Gabriel</title>
 </head>
 
 <body>
@@ -22,6 +22,7 @@
 
 
     <pre id="bottom_text"></pre>
+    
     <button class="startBtn" onclick="startGame()">
         START
     </button>
@@ -34,6 +35,7 @@
         const text = "Use your keyboard arrows to move the snake around the screen.".split("");
         const copyRight = "Made by Gabriel Justo Ordoñez".split("");
 
+        // metodo de hacer efecto escibir
         function typingBottom() {
             console.log("AAaa" + indice);
             if (indice < text.length) {
@@ -49,13 +51,11 @@
             }
         }
 
+        //Muestra la pantalla  del juego
         function startGame() {
             var boton = document.getElementsByClassName('startBtn')[0];
             boton.parentNode.removeChild(boton);
             document.getElementById('defaultCanvas0').style.display = 'block';
-
-
-
 
 
         }
